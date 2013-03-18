@@ -1,0 +1,15 @@
+<h1> 
+  <%= @player.first_name %> 
+  <%= @player.last_name %>
+</h1>
+
+<p>
+	<%= @player.ranking %>
+</p>
+
+	
+<%= link_to "Update #{@player.first_name} #{@player.last_name}", edit_player_path(@player) %>
+
+<%= link_to 'Delete', player_path(@player), :method => :delete %> 
+
+<td><h4><a href= "/" class= "btn btn-primary" >Back to all players</a></h4><td>

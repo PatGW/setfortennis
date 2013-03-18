@@ -1,0 +1,14 @@
+<div class="container">
+<h1>All Players</h1>
+<table>
+<tbody>
+	<tr>
+	<% @players.each do |player| %>
+	<td><%= link_to(player.first_name, player_path(player)) %></td>
+	<td><%= player.last_name %><td>
+	<tr>
+<% end %>
+</tbody>
+</table>
+<h4><a href="/players/new" class="btn btn-primary">Join SFT</a></h4>
+</div>

@@ -1,0 +1,32 @@
+<h1>Update Coach</h1>
+
+<section class='update-coach'>
+<div class="coach-form">
+  <%= form_for(@player) do |t| %>
+		<%= t.label :first_name %>
+		<%= t.text_field :first_name %>
+
+		<%= t.label :last_name %>
+		<%= t.text_field :last_name %>
+
+		<%= t.label :profile_picture %>
+		<%= t.text_field :profile_picture%>
+
+		<%= t.label :ranking %>
+		<%= t.text_field :ranking  %>
+
+		<%= t.label :about %>
+		<%= t.text_field :about  %>
+
+		<%= t.label :club %>
+		<%= t.text_field :club  %>
+
+	<%= t.submit "Update!", class: "btn btn-large btn-primary" %> 
+
+	<% end %>
+
+	<h4><a href="/coaches" class="btn btn-primary">Actually I want to go back to all players</a></h4>
+
+
+</div>
+</section>
