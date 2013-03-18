@@ -1,9 +1,9 @@
 <div class="container">
 <h1>New Player</h1>
 
-<section class='add-player'>
-<div class="player-form">
-  <%= form_for(@player) do |t| %>
+<section class='add-coach'>
+<div class="coach-form">
+  <%= form_for(@coach) do |t| %>
 		<%= t.label :first_name %>
 		<%= t.text_field :first_name %>
 
@@ -16,9 +16,6 @@
 		<%= t.label :ranking %>
 		<%= t.text_field :ranking  %>
 
-		<%= t.label :racket %>
-		<%= t.text_field :racket  %>
-
 		<%= t.label :about %>
 		<%= t.text_field :about  %>
 
@@ -29,7 +26,7 @@
 
 	<% end %>
 
-	<h4><a href="/" class="btn btn-primary">Actually I want to go back to all players</a></h4>
+	<h4><a href="/coaches" class="btn btn-primary">Actually I want to go back to all players</a></h4>
 
 </div>
 </section>

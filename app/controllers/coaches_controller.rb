@@ -12,7 +12,7 @@ class CoachesController < ApplicationController
   def create
     @coach = Coach.new(params[:coach])
     @coach.save!
-    redirect_to root_url
+    redirect_to coaches_url
   end
 
   def edit
@@ -38,6 +38,6 @@ class CoachesController < ApplicationController
   def destroy
     @coach = Coach.find_by_id(params[:id])
     @coach.destroy
-    redirect_to root_url
+    redirect_to coaches_url
   end
 end

@@ -1,15 +1,15 @@
 <h1> 
-  <%= @player.first_name %> 
-  <%= @player.last_name %>
+  <%= @coach.first_name %> 
+  <%= @coach.last_name %>
 </h1>
 
 <p>
-	<%= @player.ranking %>
+	<%= @coach.ranking %>
 </p>
 
 	
-<%= link_to "Update #{@player.first_name} #{@player.last_name}", edit_player_path(@player) %>
+<%= link_to "Update #{@coach.first_name} #{@coach.last_name}", edit_coach_path(@coach) %>
 
-<%= link_to 'Delete', player_path(@player), :method => :delete %> 
+<%= link_to 'Delete', coach_path(@coach), :method => :delete %> 
 
-<td><h4><a href= "/" class= "btn btn-primary" >Back to all players</a></h4><td>
+<td><h4><a href= "/coaches" class= "btn btn-primary" >Back to all players</a></h4><td>
