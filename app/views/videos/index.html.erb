@@ -1,0 +1,13 @@
+<div class="container">
+<h1>All Videos</h1>
+<table>
+<tbody>
+	<tr>
+	<% @videos.each do |video| %>
+	<td><%= link_to(video.description, video_path(video)) %></td>
+	<tr>
+<% end %>
+</tbody>
+</table>
+<h4><a href="/videos/new" class="btn btn-primary">Add a Video</a></h4>
+</div>
