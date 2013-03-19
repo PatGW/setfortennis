@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130319093034) do
+ActiveRecord::Schema.define(:version => 20130319124559) do
 
   create_table "coaches", :force => true do |t|
     t.string   "first_name"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(:version => 20130319093034) do
     t.string   "club"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "feedback"
+    t.integer  "coach_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "players", :force => true do |t|
@@ -38,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20130319093034) do
 
   create_table "videos", :force => true do |t|
     t.string   "description"
+    t.string   "link"
     t.integer  "player_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
