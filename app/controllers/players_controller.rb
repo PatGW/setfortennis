@@ -33,6 +33,7 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find_by_id(params[:id])
+    @videos = @player.videos
   end
 
   def destroy

@@ -5,7 +5,7 @@
 <div class="video-form">
   <%= form_for([@player, @video]) do |t| %>
 		<%= t.label :description %>
-		<%= t.text_field :description %>
+		<%= t.text_area :description %>
 
 		<%= t.label :link %>
 		<%= t.text_area :link %>

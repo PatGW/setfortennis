@@ -11,13 +11,13 @@ class VideosController < ApplicationController
   end
 
   def create
-    @player = Player.find(params[:id])
+    @player = Player.find(params[:player_id])
     @video = @player.videos.build(params[:video])
     if @video.save
       flash[:success] = "Added a new Video"
-      redirect_to player_video_path(@player, @video)
+      redirect_to player_path(@player)
     else
-      render :show
+      redirect_to players_path(@player)
     end
   end
 

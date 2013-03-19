@@ -5,15 +5,28 @@
 </h1>
 
 <table>
-<tbody>
-	<tr>
-	<td><%= @player.ranking %></td>
-	<td><%= @player.club %></td>
-	<tr>
-</tbody>
+    <tbody>
+        <tr>
+            <td><%= @player.ranking %></td>
+            <td><%= @player.club %></td>
+        </tr>
+    </tbody>
 </table>
 
-	
+Videos:
+<table>
+  <tbody>
+    <% @videos.each do |video| %>
+      <tr>
+        <td><%= video.link %></td>
+        <td><%= video.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+    
 <%= link_to "Update #{@player.first_name} #{@player.last_name}", edit_player_path(@player) %>
 
 <%= link_to 'Delete', player_path(@player), :method => :delete %>
@@ -21,5 +34,4 @@
 <%= link_to "Add a Video", new_player_video_path(@player) %>
 
 <h4><a href= "/" class= "btn btn-primary" >Back to all players</a></h4>
-
-	</div>
+</div>
