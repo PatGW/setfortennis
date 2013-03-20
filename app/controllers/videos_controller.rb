@@ -22,17 +22,19 @@ class VideosController < ApplicationController
   end
 
   def edit
-    @video = Video.find(params[:id])
+    @player = Player.find(params[:player_id])
+    @video = Video.find_by_id(params[:id])
     render :edit
   end
 
   def update
+    @player = Player.find(params[:player_id])
     @video = Video.find(params[:id])
     @video.update_attributes(params[:video])
 
     if @video.save
       flash[:success] = "Updated Video"
-      redirect_to @video
+      redirect_to @player
     else
       render :edit
     end

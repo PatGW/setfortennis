@@ -3,10 +3,12 @@ Setfortennis::Application.routes.draw do
   root :to => 'players#index'
 
   resources :players do
-    resources :videos 
+    resources :videos do
+      resources :comments
+    end
   end
   
-  resources :coaches
+  resources :coaches 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

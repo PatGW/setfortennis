@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Update Video</h1>
+
+<section class='update-video'>
+<div class="video-form">
+  <%= form_for([@player, @video]) do |t| %>
+		<%= t.label :description %>
+		<%= t.text_area :description %>
+
+		<%= t.label :link %>
+		<%= t.text_area :link %>
+
+	<%= t.submit "Update!", class: "btn btn-large btn-primary" %> 
+
+	<% end %>
+
+	<h4><a href="/" class="btn btn-primary">Actually I want to go back to all players</a></h4>
+
+
+</div>
+</section>
+</div>

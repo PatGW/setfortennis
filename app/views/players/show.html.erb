@@ -18,8 +18,9 @@ Videos:
   <tbody>
     <% @videos.each do |video| %>
       <tr>
-        <td><%= video.link %></td>
+        <td><%= video.link.html_safe %></td>
         <td><%= video.description %></td>
+        <td><%= link_to "Update Video", edit_player_video_path(@player, @video) %><td>
       </tr>
     <% end %>
   </tbody>
