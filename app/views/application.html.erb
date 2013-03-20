@@ -9,7 +9,19 @@
 <body>
 	<div class="container">
 
+<div id="user_nav">
+	<% if current_user %>
+		Logged in as <%= current_user.email %>
+		<%= link_to "log out", log_out_path %>
+	<% else %>
+		<%= link_to "Sign Up", sign_up_path %> or
+		<%= link_to "Log in", log_in_path %>
+	<% end %>
+</div>
 <%= render :partial => "layouts/header" %>
+
+<% flash.each do |name, msg| %>
+	<%= content_tag :div. msg, :id => "flash_#{name}" %>
 
 <%= yield %>
 	</div>

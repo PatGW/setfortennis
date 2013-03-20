@@ -1,5 +1,9 @@
 Setfortennis::Application.routes.draw do
 
+  get "sessions/new"
+
+  get "user/new"
+
   root :to => 'players#index'
 
   resources :players do
@@ -9,6 +13,16 @@ Setfortennis::Application.routes.draw do
   end
   
   resources :coaches 
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
+
+  get "sign_up" => "users#new", :as => "sign_up"
+  root :to => "users#new"
+  
+  get "log_in" => "sessions#new", :as => "log_in"
+
+  resources :users
+  resources :sessions
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

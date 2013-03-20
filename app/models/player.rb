@@ -3,4 +3,6 @@ class Player < ActiveRecord::Base
 
   has_many :videos
 
+  has_one :user, :as => :tennis_player
+
 end
