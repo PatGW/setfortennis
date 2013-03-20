@@ -1,10 +1,10 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password_hash, :password_salt
-  attr_accessor :password 
+  attr_accessible :email, :password_hash, :password_salt, :password, :password_confirmation
+
 
   belongs_to :tennis_player, :polymorphic => true
 
-  before_save :encrypt_password
+  before_save :encrypts_password
 
   validates_confirmation_of :password
   validates_confirmation_of :password, :on => :create
