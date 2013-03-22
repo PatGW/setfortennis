@@ -16,22 +16,20 @@ gem "bcrypt-ruby", :require => "bcrypt"
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
 
-group :test, :development do
-  gem 'turn'
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'guard-rspec'
-  gem 'growl_notify'
-end
+gem "minitest" # the test framework
+gem "guard" # the program that runs the tests on every file change
+gem "guard-minitest" # this helps you to create the Guardfile
+gem 'rb-fsevent', '~> 0.9.1' # required by guard
+gem "ansi" # makes the output coloured
+gem 'turn' # makes the output nice
+gem "terminal-notifier-guard"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
