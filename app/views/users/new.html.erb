@@ -26,6 +26,15 @@
 		<%= f.password_field :password_confirmation %>
 	</p>
 
+	<p>
+		<%= radio_button_tag :player_type, "player", :checked => false %><br />
+		<%= label :player_type, 'Player' %>
+	</p>
+	<p>
+		<%= radio_button_tag :player_type, "coach", :checked => true %><br />
+		<%= label :player_type, 'Coach' %>
+	</p>
+
 	
 
 

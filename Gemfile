@@ -44,4 +44,4 @@ gem "terminal-notifier-guard"
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
