@@ -1,10 +1,18 @@
 <div class="container">
 	<header>
-  <a href="http://www.setfortennis.com"><img src="/assets/logo.jpeg"/></a>
+
+	<div class="logo">
+		<%= link_to(image_tag 'tennis_ball.png', :width => 100, :height => 100) %>
+	</div>
+	<div class="slogan">
+		<h3>Setfortennis</h3>
+	</div>
+
 
   <div id="user_nav">
-	<% if current_user %>
-		Logged in as <%= current_user.email %>
+	<% if current_user? %>
+		Logged in as <%= @current_user %>
+
 		<%= link_to "log out", log_out_path %>
 	<% else %>
 		<%= link_to "Sign Up", sign_up_path %> or

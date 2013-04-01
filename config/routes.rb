@@ -1,10 +1,10 @@
 Setfortennis::Application.routes.draw do
 
+  root :to => 'coaches#index'
+
   get "sessions/new"
 
   get "user/new"
-
-  root :to => 'players#index'
 
   resources :players do
     resources :videos do

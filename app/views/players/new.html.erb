@@ -3,7 +3,7 @@
 
 <section class='add-player'>
 <div class="player-form">
-  <%= form_for(@player) do |t| %>
+  <%= form_for @player, :html => {:multipart => true} do |t| %>
 		<%= t.label :first_name %>
 		<%= t.text_field :first_name %>
 
@@ -24,6 +24,9 @@
 
 		<%= t.label :club %>
 		<%= t.text_field :club  %>
+
+    <%= t.label :image %>
+    <%= t.file_field :image %>
 
 
 	<%= t.submit "Join SFT!", class: "btn btn-large btn-primary" %> 

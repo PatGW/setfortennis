@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
-gem "paperclip", "~> 3.0"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'aws-sdk', '~> 1.6.0'
+gem 'paperclip', '~> 3.4.0'
 
 gem "bcrypt-ruby", :require => "bcrypt"
 

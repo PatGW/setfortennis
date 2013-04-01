@@ -1,6 +1,8 @@
 class PlayersController < ApplicationController
   protect_from_forgery
 
+  before_filter :check_logged_in, :except => [:index, :show]
+
   def index
     @players = Player.all
   end
